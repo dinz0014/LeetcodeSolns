@@ -1,3 +1,11 @@
+/*
+The solution to the leetcode problem of finding the median of 2 sorted arrays. The trick is to find left and right partitions of the final sorted array by
+binary searching for left and right boundaries within the 2 arrays.
+
+Time Complexity: O(log(min(m, n)))
+Space Complexity: O(1);
+*/
+
 #include <vector>
 #include <cmath>
 using namespace std;
