@@ -1,3 +1,11 @@
+/*
+This is the solution to the N Queens problem using backtracking. It checks all possible placements with one optimisation being that we only have N positions for each queen.
+Once a queen is placed in a row i, no other queen can be placed in that row.
+
+Time Complexity: O(n!)
+Space Complexity: O(n^2)
+*/
+
 #include <vector>
 #include <string>
 #include <unordered_set>
