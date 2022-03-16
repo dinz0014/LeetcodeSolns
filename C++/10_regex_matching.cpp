@@ -1,3 +1,12 @@
+/*
+This file implements the solution to Leetcode problem 10, Regular Expression Matching. Uses recursion and DP to calculate. The trick is to traverse pattern and string
+simultaneously while matching characters as you go. If wildcard appears, there are two choices. Either don't use it, or use character once and recurse (recursion takes
+care of more repetitions this way).
+
+Time Complexity: O(TP) worst case comes when wildcard appears and have to check all repetitions
+Space Complexity: O(TP) for the table
+*/
+
 #include <vector>
 #include <string>
 using namespace std;
@@ -59,7 +68,7 @@ public:
         p0 = p;
         vector<int> z(pLen+1, -1);
         lookUp = vector<vector<int>>(sLen+1, z);
-        
+
         return pMatch(0, 0);
     }
 };
