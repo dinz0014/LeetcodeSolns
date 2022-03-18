@@ -1,3 +1,9 @@
+'''
+This file implements a RandomizedSet datastructure that inserts, removes, and gets a random element all in O(1) time. The trick is to combine the functionality
+of an array and a hashmap
+
+Leetcode Link: https://leetcode.com/problems/insert-delete-getrandom-o1/
+'''
 from random import randint
 
 class RandomizedSet:
