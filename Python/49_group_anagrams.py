@@ -8,17 +8,19 @@ Storage Complexity: O(N*M) to store in the hashmap
 Problem Link: https://leetcode.com/problems/group-anagrams/submissions/
 '''
 
+from typing import List
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        sortedToUnSorted = {}
-        n = len(strs)
+        sortedToUnSorted = {} # Maps sorted string to a list of original strings that take the same sorted form
         
-        for i in range(n):
-            s = tuple(sorted(strs[i]))
+        for w in strs:
+            # Turn the list into a tuple for hashing
+            s = tuple(sorted(w))
             
             if s in sortedToUnSorted:
-                sortedToUnSorted[s].append(strs[i])
+                sortedToUnSorted[s].append(w)
             else:
-                sortedToUnSorted[s] = [strs[i]]
+                sortedToUnSorted[s] = [w]
         
         return sortedToUnSorted.values()
