@@ -29,7 +29,6 @@ class Solution:
             prev = f
             l = l.next
             f = f.next
-            print(prev.val, f.val, l.val)
         
         if prev is None:
             return head.next
